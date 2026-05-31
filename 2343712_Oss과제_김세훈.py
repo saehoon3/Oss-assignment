@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyMDlEHLZzywi+Q2qyo5pjuz",
+      "authorship_tag": "ABX9TyM+LuNJDITnNdgWSDaXwysa",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -148,12 +148,31 @@
     },
     {
       "cell_type": "code",
-      "source": [],
+      "source": [
+        "new_model = RandomForestClassifier(n_estimators=10, max_depth=3, random_state=42)\n",
+        "new_model.fit(X_train, y_train)\n",
+        "\n",
+        "y_pred = new_model.fit(X_train, y_train).predict(X_test)\n",
+        "accuracy = accuracy_score(y_test, y_pred)\n",
+        "print(accuracy)"
+      ],
       "metadata": {
-        "id": "x2bkiJ9EvrTz"
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "x2bkiJ9EvrTz",
+        "outputId": "071a9d2d-d2cb-4b9a-82d0-1f3bd2d97492"
       },
-      "execution_count": null,
-      "outputs": []
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0.9444444444444444\n"
+          ]
+        }
+      ]
     }
   ]
 }
