@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyOv0nE6meeCmXSUKngzHwW2",
+      "authorship_tag": "ABX9TyMDlEHLZzywi+Q2qyo5pjuz",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -117,9 +117,40 @@
     },
     {
       "cell_type": "code",
+      "source": [
+        "from sklearn.ensemble import RandomForestClassifier\n",
+        "from sklearn.metrics import accuracy_score, classification_report\n",
+        "\n",
+        "model = RandomForestClassifier(random_state=42)\n",
+        "model.fit(X_train, y_train)\n",
+        "\n",
+        "y_pred = model.predict(X_test)\n",
+        "accuracy = accuracy_score(y_test, y_pred)\n",
+        "print(accuracy)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0mS877HtspCF",
+        "outputId": "073fb033-0bdd-4688-ed39-33d773e0d2d3"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
       "source": [],
       "metadata": {
-        "id": "0mS877HtspCF"
+        "id": "x2bkiJ9EvrTz"
       },
       "execution_count": null,
       "outputs": []
